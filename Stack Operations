@@ -1,0 +1,59 @@
+
+#include <iostream>
+using namespace std;
+int  stack[5],n=5,top =-1;
+void push(int x){
+    if(top==n-1)
+    cout <<"Stack is full";
+    else{
+        top++;
+        stack[top]=x;
+    }
+}
+void display(){
+    if(top>=0){
+        cout<<"Stack elements are"<<endl;
+        for(int i=top;i>=0;i--)
+            cout<<stack[i]<<endl;
+    }
+    else{
+       cout<<"Stack is Empty"<<endl;
+    }
+}
+void pop(){
+    if(top ==-1)
+        cout<<"Stack is empty"<<endl;
+    else{
+        cout<<"The popped element is:"<<stack[top]<<endl;
+        top--;
+    }
+}
+int peek(){
+    return stack[top];
+}
+void search(int element){
+    for(int i=top;i>=0;i--){
+        if(stack[i]==element){
+            cout<<" Element "<<element<<" found at postion "
+            <<(top -i+1)<<"from top,"<<endl;
+            return;
+        }
+    }
+    cout<<" Element "<<element<<" not found in task";
+}
+int main() {
+    push(1);
+    push(2);
+    push(3);
+    push(4);
+    push(5);
+    display();
+    int y=peek();
+    std::cout<<" Top elements of the stack is: "<<y;
+    search(3);
+    
+    
+    
+
+    return 0;
+}
