@@ -49,7 +49,7 @@ int main() {
     push(5);
     display();
     int y=peek();
-    std::cout<<" Top elements of the stack is: "<<y;
+    std::cout<<" Top elements of the stack is: "<<y<<endl;
     search(3);
     
     
