@@ -23,7 +23,7 @@ void appendNode(Node*& head, int val) {
 }
 
 // Function to generate the Fibonacci sequence and store it in a linked list
-void genLinkedList(Node*& head, int count) {
+void genLinkedListFib(Node*& head, int count) {
     if (count <= 0) {
         return;
     }
@@ -71,7 +71,7 @@ int main() {
     Node* fibonacciList = nullptr; // Initialize head of the linked list
     int numTerms = 10; // Number of Fibonacci terms to generate
 
-    generateFibonacciLinkedList(fibonacciList, numTerms);
+    genLinkedListFib(fibonacciList, numTerms);
     std::cout << "Fibonacci Sequence in Linked List: ";
     printLinkedList(fibonacciList);
 
